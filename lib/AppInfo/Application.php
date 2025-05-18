@@ -16,7 +16,7 @@ class Application extends App implements IBootstrap {
 	/** @psalm-suppress PossiblyUnusedMethod */
 	public function __construct() {
 		parent::__construct(self::APP_ID);
-        Util::addScript('simple_server_link', 'fileactions');
+        Util::addInitScript(self::APP_ID, 'fileactions');
 	}
 
 	public function register(IRegistrationContext $context): void {
